@@ -83,7 +83,7 @@ FastAPI-RBAC-Microservice/
 │ ├── env.py
 │ └── alembic.ini
 ├── requirements.txt                        # Project dependencies
-├── .env.example                            # Environment variables template
+├── .env                                    # Environment variables template
 └── README.md                               # Project documentation
 ```
 ## 🚀 Quick Start
