@@ -1,7 +1,7 @@
 
 # FastAPI Framework
-fastapi==0.104.1
-uvicorn==0.24.0
+fastapi
+uvicorn
 
 # Database
 sqlalchemy==2.0.23
@@ -15,7 +15,7 @@ python-multipart==0.0.6
 bcrypt==4.1.2
 
 # Environment Variables
-python-dotenv==1.0.0
+python-dotenv
 
 # Email Validation
 pydantic[email]
